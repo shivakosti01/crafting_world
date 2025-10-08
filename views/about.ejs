@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Crafting World</title>
+<link rel="stylesheet" href="/stylesheets/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    /* Navbar */
+    nav.navbar {
+      background-color: #333;
+    }
+    nav.navbar .navbar-brand,
+    nav.navbar .nav-link {
+      color: #fff;
+    }
+    nav.navbar .nav-link:hover {
+      color: #ffc107;
+    }
+
+    /* Top Banner */
+    .about-banner {
+      background: url('/images/toppp.svg') center/cover no-repeat;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+    }
+    .about-banner h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+    }
+
+    /* About Section */
+    #about-content img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    /* Customer Reviews Auto-Scroll */
+    .reviews-wrapper {
+      overflow: hidden;
+      width: 100%;
+      background: #f8f9fa;
+      padding: 30px 0;
+      position: relative;
+    }
+    .reviews-track {
+      display: flex;
+      width: max-content;
+      animation: scrollReviews 30s linear infinite;
+    }
+    .review-card {
+      flex: 0 0 auto;
+      width: 300px;
+      margin-right: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      white-space: normal; /* Ensure text wraps */
+    }
+    .review-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+    @keyframes scrollReviews {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); } /* Adjust for seamless loop */
+    }
+
+    /* Footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 40px 0;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #ffc107;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .review-card {
+        width: 250px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+ <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold caveat-uniquifier " href="#"><p class="logo">Crafting World</p></a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/service">Services</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/review">Review</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/contact">Contact</a></li>
+          <li class="nav-item "><a class="btn poppins-medium " href="/login">login</a ></li>
+          <li class="nav-item "><a class="btn poppins-medium " href="/signup">Signup</a></li>
+
+      </div>
+
+      <!-- Mobile Offcanvas Menu -->
+      <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title caveat-uniquifier">Crafting World</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+         <li class="nav-item "><a class="btn poppins-medium" href="/login">login</a ></li>
+          <li class="nav-item "><a class="btn poppins-medium" href="/signup">Signup</a></li>
+
+        </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+<div class="modal fade" id="authModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="authTitle">Login</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <!-- Login Form -->
+        <form id="loginForm">
+          <div class="mb-3">
+            <label for="loginEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="loginEmail" placeholder="Enter email" required>
+          </div>
+          <div class="mb-3">
+            <label for="loginPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="loginPassword" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 mb-2">Login</button>
+        </form>
+        <!-- Signup Form -->
+        <form id="signupForm" class="d-none">
+          <div class="mb-3">
+            <label for="signupName" class="form-label">Name</label>
+            <input type="text" class="form-control" id="signupName" placeholder="Enter name" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupEmail" class="form-label">Email</label>
+            <input type="email" class="form-control" id="signupEmail" placeholder="Enter email" required>
+          </div>
+          <div class="mb-3">
+            <label for="signupPassword" class="form-label">Password</label>
+            <input type="password" class="form-control" id="signupPassword" placeholder="Enter password" required>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 mb-2">Signup</button>
+        </form>
+        <div class="text-center">
+          <span id="toggleAuth">Don't have an account? <a href="#">Signup</a></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Top Banner / Hero -->
+<section class="about-banner">
+  <div>
+    <h1>About Crafting World</h1>
+    <p class="lead mt-3">Handcrafted Items, Gifts & Creative Workshops</p>
+  </div>
+</section>
+
+<!-- About Details -->
+<section class="py-5 bg-light about">
+  <div class="text-center mb-5">
+      <h2 class="fw-bold">About</h2> </div>
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Side Image -->
+      <div class="col-md-6 mb-4 mb-md-0 left-img ">
+        <img src="/images/wallets-1293507_1280.jpg" alt="Crafting World" class="img-fluid rounded shadow ">
+      </div>
+      
+      <!-- Right Side Content -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3 ">About Crafting World</h2>
+        <p class="text-muted mb-4  poppins-medium">
+          Welcome to <strong>Crafting World</strong>, your one-stop destination for unique handmade products, 
+          personalized gifts, and creative home décor.  
+          We believe in turning imagination into reality with creativity, quality, and love.
+        </p>
+        <p class="text-muted mb-4 poppins-medium">
+          From customized wallets to elegant photo frames, each product is crafted with passion to 
+          bring joy and beauty to your life.
+        </p>
+        <h2 class="fw-bold">Contact details</h2>
+        <p class="text-muted mb-4 poppins-medium">
+          
+          Location - Vijay nagar indore (Madhya pradesh).<br>
+          Contact  - 7000355922.<br>
+          Email    - shivakosti2003@gmail.com <br>
+        </p>
+        <p class="text-muted mb-4 poppins-medium">
+          From customized wallets to elegant photo frames, each product is crafted with passion to 
+          bring joy and beauty to your life.
+        </p>
+        <a href="#explore" class="btn btn-dark px-4 py-2 rounded-pill" style="background-color: #212529;">Explore More</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- Why Choose Us -->
+<section class="about-section container">
+  <h2 class="text-center mb-5">Why Choose Crafting World?</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded text-center bg-white h-100">
+        <h4>✨ 100% Handmade</h4>
+        <p>Every product is crafted with love, patience, and attention to detail.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded text-center bg-white h-100">
+        <h4>🌿 Eco-Friendly</h4>
+        <p>We use sustainable materials to create products that care for nature.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded text-center bg-white h-100">
+        <h4>🎁 Perfect for Gifting</h4>
+        <p>Unique designs that make your special moments even more memorable.</p>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded text-center bg-white h-100">
+        <h4>🛠 Skilled Artisans</h4>
+        <p>Each item is handmade by experienced artisans with years of expertise.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded text-center bg-white h-100">
+        <h4>💎 Premium Quality</h4>
+        <p>We ensure durability, authenticity, and premium finishing in every product.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded text-center bg-white h-100">
+        <h4>🌍 Support Local</h4>
+        <p>By choosing us, you support local talent and traditional handmade culture.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light about">
+  <div class="container-fluid px-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contact Us</h2>
+      <p class="text-muted">Reach out to us via the form or visit our office</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Left: Contact Form -->
+      <div class="col-lg-6 col-md-12">
+        <form action="#" method="POST" class="contact-form bg-white p-4 rounded shadow-lg">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input type="text" class="form-control form-control-lg" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control form-control-lg" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label fw-bold">Subject</label>
+            <input type="text" class="form-control form-control-lg" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-bold">Message</label>
+            <textarea class="form-control form-control-lg" id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark btn-lg px-5">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right: Office Details & Map -->
+      <div class="col-lg-6 col-md-12">
+        <div class="office-details bg-white p-4 rounded shadow-lg h-100">
+          <h4 class="fw-bold mb-3">Our Office</h4>
+          <p><strong>Address:</strong> 123 Crafting Street, Creative City, India</p>
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Email:</strong> info@craftingworld.com</p>
+          <p><strong>Working Hours:</strong> Mon - Sat, 9:00 AM - 6:00 PM</p>
+
+          <!-- Google Map Embed -->
+          <div class="map mt-3">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902857047673!2d90.40154581543241!3d23.75090569463507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd9e4ee9e1%3A0x5c2c3c4c8fbb0f!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sin!4v1695300000000" 
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- About / Logo -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4 class="fw-bold text-white">Crafting World</h4>
+        <p>Handcrafted items, unique gifts, and creative workshops for everyone.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="fw-bold text-white">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#home" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+          <li><a href="#services" class="text-light text-decoration-none">Services</a></li>
+          <li><a href="#gallery" class="text-light text-decoration-none">Gallery</a></li>
+          <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="fw-bold text-white">Our Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="#services" class="text-light text-decoration-none">Custom Wallets</a></li>
+          <li><a href="#services" class="text-light text-decoration-none">Photo Frames</a></li>
+          <li><a href="#services" class="text-light text-decoration-none">Home Decor</a></li>
+          <li><a href="#services" class="text-light text-decoration-none">Gift Items</a></li>
+          <li><a href="#services" class="text-light text-decoration-none">Craft Workshops</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="fw-bold text-white">Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> 123 Crafting Street, Creative City, India</p>
+        <p><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
+        <p><i class="bi bi-envelope-fill"></i> info@craftingworld.com</p>
+        <div class="mt-2">
+          <a href="#" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-secondary">
+    <div class="text-center pb-3">
+      <p class="mb-0">&copy; 2025 Crafting World. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+
+
+

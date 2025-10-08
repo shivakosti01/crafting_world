@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crafting World</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+     
+  <!-- Navbar -->
+   <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <!-- Logo -->
+      <a class="navbar-brand fw-bold caveat-uniquifier " href="#"><p class="logo">Crafting World</p></a>
+
+      <!-- Toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Desktop Menu -->
+      <div class="collapse navbar-collapse justify-content-end d-none d-lg-flex">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/service">Services</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/review">Review</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/blog">Blog</a></li>
+          <li class="nav-item"><a class="nav-link poppins-medium " href="/contact">Contact</a></li>
+          <li class="nav-item "><a class="btn poppins-medium " href="/login">login</a ></li>
+          <li class="nav-item "><a class="btn poppins-medium " href="/signup">Signup</a></li>
+
+      </div>
+
+      <!-- Mobile Offcanvas Menu -->
+      <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="mobileMenu">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title caveat-uniquifier">Crafting World</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/service">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="/gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+         <li class="nav-item "><a class="btn poppins-medium" href="/login">login</a ></li>
+          <li class="nav-item "><a class="btn poppins-medium" href="/signup">Signup</a></li>
+
+        </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+ <!-- Carousel Slider -->
+  <div id="carouselExample" class="carousel slide position-relative about" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/images/1 b.png" class="d-block w-100" alt="Slide 1">
+      </div>
+      <div class="carousel-item">
+        <img src="/images/2 b.png" class="d-block w-100" alt="Slide 2">
+      </div>
+      <div class="carousel-item">
+        <img src="/images/3 b.png" class="d-block w-100" alt="Slide 3">
+      </div>
+    </div>
+
+    <!-- Global Overlay (सिर्फ एक बार लिखा गया) -->
+    <div class="carousel-overlay">
+      <div class="welcome-text poppins-medium" style="color:#212529;">Welcome crafting world  <br><h4 class="img_lor poppins-medium" style="color: #212529; font-weight: 1000; font-size: 40gh;">At Crafting World, we bring you a unique collection of handmade products crafted with love, skill, and passion. From customized wallets, elegant photo frames, and beautiful home décor to creative gifting items, every piece tells a story of artistry and dedication. Our mission is to celebrate the beauty of handmade work by offering you products that are not just accessories but timeless treasures.</h4></div>
+      <button class="explore-btn" style="background-color: #212529;">Explore</button>
+    </div>
+  </div>
+
+
+<!-- //////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- About Section -->
+
+<section class="py-5 bg-light about">
+  <div class="text-center mb-5">
+      <h2 class="fw-bold">About</h2> </div>
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Left Side Image -->
+      <div class="col-md-6 mb-4 mb-md-0 left-img ">
+        <img src="/images/wallets-1293507_1280.jpg" alt="Crafting World" class="img-fluid rounded shadow ">
+      </div>
+      
+      <!-- Right Side Content -->
+      <div class="col-md-6">
+        <h2 class="fw-bold mb-3 ">About Crafting World</h2>
+        <p class="text-muted mb-4  poppins-medium">
+          Welcome to <strong>Crafting World</strong>, your one-stop destination for unique handmade products, 
+          personalized gifts, and creative home décor.  
+          We believe in turning imagination into reality with creativity, quality, and love.
+        </p>
+        <p class="text-muted mb-4 poppins-medium">
+          From customized wallets to elegant photo frames, each product is crafted with passion to 
+          bring joy and beauty to your life.
+        </p>
+        <h2 class="fw-bold">Contact details</h2>
+        <p class="text-muted mb-4 poppins-medium">
+          
+          Location - Vijay nagar indore (Madhya pradesh).<br>
+          Contact  - 7000355922.<br>
+          Email    - shivakosti2003@gmail.com <br>
+        </p>
+        <p class="text-muted mb-4 poppins-medium">
+          From customized wallets to elegant photo frames, each product is crafted with passion to 
+          bring joy and beauty to your life.
+        </p>
+        <a href="#explore" class="btn btn-dark px-4 py-2 rounded-pill" style="background-color: #212529;">Explore More</a>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Services Section -->
+<section id="services" class="py-5">
+  <div class="container">
+    <!-- Heading -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Our Services</h2>
+      <p class="text-muted poppins-medium">Explore the wide range of crafting services we provide</p>
+    </div>
+
+    <div class="row g-4">
+
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/wallet_g.png" class="card-img" alt="Custom Wallets">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Custom Wallets</h5>
+            <p class="text-light small poppins-medium">Handcrafted wallets tailored to your style with premium quality.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/_Brown Floral Vision Board Photo Collage (1).png" class="card-img" alt="Photo Frames">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Photo Frames</h5>
+            <p class="text-light small poppins-medium">Unique handmade frames to preserve your beautiful memories.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/gift.jpeg" class="card-img" alt="Home Decor">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Home Decor</h5>
+            <p class="text-light small poppins-medium">Creative décor pieces designed to add elegance to your home.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/giftbox.png" class="card-img" alt="Gift Items">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Gift box</h5>
+            <p class="text-light small poppins-medium">Personalized gifts to make every occasion extra special.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/keyring.jpeg" class="card-img" alt="Gift Items">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Keyring</h5>
+            <p class="text-light small poppins-medium">Personalized gifts to make every occasion extra special.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/cahin.png" class="card-img" alt="Gift Items">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Chains</h5>
+            <p class="text-light small poppins-medium">Personalized gifts to make every occasion extra special.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+
+      
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/brashlet.png" class="card-img" alt="Gift Items">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Breshlet</h5>
+            <p class="text-light small poppins-medium">Personalized gifts to make every occasion extra special.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/tshirt.png" class="card-img" alt="Craft Workshops">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Printed tshirt</h5>
+            <p class="text-light small poppins-medium">Interactive workshops to learn crafting skills with experts.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service Card -->
+      <div class="col-md-4">
+        <div class="card border-0 shadow-lg overflow-hidden position-relative service-card">
+          <img src="/images/brashlet.png" class="card-img" alt="Customized Products">
+          <div class="overlay-content d-flex flex-column justify-content-center align-items-center text-center p-3">
+            <h5 class="text-white fw-bold">Customized Products</h5>
+            <p class="text-light small poppins-medium">Bring your imagination to life with our customized creations.</p>
+            <a href="/order" class="btn btn-light btn-sm mt-2">Order Now</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Image Gallery Section -->
+<!-- Gallery Section -->
+<section class="py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Product Gallery</h2>
+    <div class="row g-4">
+      
+      <!-- Repeat cards -->
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/Beige Aesthetic New Year Vision Board Collage  (1).png" alt="Gallery 1">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/frame.png" alt="Gallery 2">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/frame2.jpg" alt="Gallery 3">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/ball frame.jpg" alt="Gallery 4">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/table frame.jpg" alt="Gallery 5">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/night frame.jpg" alt="Gallery 6">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/cahin.png" alt="Gallery 7">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/gift.jpeg" alt="Gallery 8">
+        </div>
+      </div>
+      
+      <div class="col-lg-4 col-md-6">
+        <div class="gallery-card">
+          <img src="/images/card.png" alt="Gallery 9">
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-5 bg-light about">
+  <div class="container-fluid px-5">
+    <div class="text-center mb-5">
+      <h2 class="fw-bold">Contact Us</h2>
+      <p class="text-muted">Reach out to us via the form or visit our office</p>
+    </div>
+
+    <div class="row g-4">
+      <!-- Left: Contact Form -->
+      <div class="col-lg-6 col-md-12">
+        <form action="#" method="POST" class="contact-form bg-white p-4 rounded shadow-lg">
+          <div class="mb-3">
+            <label for="name" class="form-label fw-bold">Name</label>
+            <input type="text" class="form-control form-control-lg" id="name" placeholder="Your Name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label fw-bold">Email</label>
+            <input type="email" class="form-control form-control-lg" id="email" placeholder="Your Email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label fw-bold">Subject</label>
+            <input type="text" class="form-control form-control-lg" id="subject" placeholder="Subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label fw-bold">Message</label>
+            <textarea class="form-control form-control-lg" id="message" rows="5" placeholder="Your Message" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-dark btn-lg px-5">Send Message</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Right: Office Details & Map -->
+      <div class="col-lg-6 col-md-12">
+        <div class="office-details bg-white p-4 rounded shadow-lg h-100">
+          <h4 class="fw-bold mb-3">Our Office</h4>
+          <p><strong>Address:</strong> 123 Crafting Street, Creative City, India</p>
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Email:</strong> info@craftingworld.com</p>
+          <p><strong>Working Hours:</strong> Mon - Sat, 9:00 AM - 6:00 PM</p>
+
+          <!-- Google Map Embed -->
+          <div class="map mt-3">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.902857047673!2d90.40154581543241!3d23.75090569463507!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd9e4ee9e1%3A0x5c2c3c4c8fbb0f!2sDhaka%2C%20Bangladesh!5e0!3m2!1sen!2sin!4v1695300000000" 
+              width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Customer Reviews Section -->
+<section id="customer-reviews" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h3 class="fw-bold">Customer Reviews</h3>
+      <p class="text-muted">See what our happy customers have to say</p>
+    </div>
+
+    <div class="reviews-wrapper" style="overflow:hidden; width:100%; position:relative;">
+      <div class="reviews-track d-flex" style="animation: scrollReviews 30s linear infinite;">
+        <!-- Review 1 -->
+        <div class="review-card flex-shrink-0 me-3 p-3 bg-white rounded shadow" style="width:300px; white-space:normal;">
+          <p>"I ordered a customized wallet and it exceeded my expectations! Amazing quality and craftsmanship."</p>
+          <h6 class="fw-bold mt-2 mb-0">- Priya Sharma</h6>
+        </div>
+        <!-- Review 2 -->
+        <div class="review-card flex-shrink-0 me-3 p-3 bg-white rounded shadow" style="width:300px; white-space:normal;">
+          <p>"Beautiful photo frames, perfect for gifting. Excellent service and fast delivery."</p>
+          <h6 class="fw-bold mt-2 mb-0">- Ramesh Kumar</h6>
+        </div>
+        <!-- Review 3 -->
+        <div class="review-card flex-shrink-0 me-3 p-3 bg-white rounded shadow" style="width:300px; white-space:normal;">
+          <p>"Craft workshops were interactive and fun. I learned so much and enjoyed every session!"</p>
+          <h6 class="fw-bold mt-2 mb-0">- Anjali Verma</h6>
+        </div>
+        <!-- Duplicate reviews for seamless scroll -->
+        <div class="review-card flex-shrink-0 me-3 p-3 bg-white rounded shadow" style="width:300px; white-space:normal;">
+          <p>"I ordered a customized wallet and it exceeded my expectations! Amazing quality and craftsmanship."</p>
+          <h6 class="fw-bold mt-2 mb-0">- Priya Sharma</h6>
+        </div>
+        <div class="review-card flex-shrink-0 me-3 p-3 bg-white rounded shadow" style="width:300px; white-space:normal;">
+          <p>"Beautiful photo frames, perfect for gifting. Excellent service and fast delivery."</p>
+          <h6 class="fw-bold mt-2 mb-0">- Ramesh Kumar</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Footer Section -->
+<footer class="bg-dark text-light pt-5">
+  <div class="container">
+    <div class="row">
+
+      <!-- About / Logo -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h4 class="fw-bold text-white">Crafting World</h4>
+        <p>Handcrafted items, unique gifts, and creative workshops for everyone.</p>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="fw-bold text-white">Quick Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="/" class="text-light text-decoration-none">Home</a></li>
+          <li><a href="/about" class="text-light text-decoration-none">About</a></li>
+          <li><a href="/service" class="text-light text-decoration-none">Services</a></li>
+          <li><a href="/gallery" class="text-light text-decoration-none">Gallery</a></li>
+          <li><a href="/contact" class="text-light text-decoration-none">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services Links -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="fw-bold text-white">Our Services</h5>
+        <ul class="list-unstyled">
+          <li><a href="/service" class="text-light text-decoration-none">Custom Wallets</a></li>
+          <li><a href="/service" class="text-light text-decoration-none">Photo Frames</a></li>
+          <li><a href="/service" class="text-light text-decoration-none">Home Decor</a></li>
+          <li><a href="/service" class="text-light text-decoration-none">Gift Items</a></li>
+          <li><a href="/service" class="text-light text-decoration-none">Craft Workshops</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Details -->
+      <div class="col-lg-3 col-md-6 mb-4">
+        <h5 class="fw-bold text-white">Contact Us</h5>
+        <p><i class="bi bi-geo-alt-fill"></i> 123 Crafting Street, Creative City, India</p>
+        <p><i class="bi bi-telephone-fill"></i> +91 9876543210</p>
+        <p><i class="bi bi-envelope-fill"></i> info@craftingworld.com</p>
+        <div class="mt-2">
+          <a href="https://www.instagram.com/craft_with_astha?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-light me-2"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/craft_with_astha?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="text-light me-2"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="text-light me-2"><i class="bi bi-twitter"></i></a>
+          <a href="#" class="text-light"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+
+    </div>
+
+    <hr class="bg-secondary">
+    <div class="text-center pb-3">
+      <p class="mb-0">&copy; 2025 Crafting World. All Rights Reserved.</p>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="Script.js"></script>
+<!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
