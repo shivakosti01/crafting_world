@@ -2,7 +2,7 @@ require("dotenv").config();
 var express = require("express");
 var router = express.Router();
 const userModel = require("./users");
-const orderModel = require("./order");
+const orderModel = require("./Order");
 
 const localStrategy = require("passport-local");
 const passport = require("passport");
